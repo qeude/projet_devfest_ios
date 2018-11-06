@@ -14,6 +14,11 @@
 		011842AA2185F24B0004A37B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 011842A82185F24B0004A37B /* LaunchScreen.storyboard */; };
 		011842B22185F84F0004A37B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011842B12185F84F0004A37B /* HomeViewController.swift */; };
 		011842B42185F9DE0004A37B /* SessionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011842B32185F9DE0004A37B /* SessionsViewController.swift */; };
+		01591FEB2191D76C00DA8DD3 /* SpeakersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01591FEA2191D76C00DA8DD3 /* SpeakersViewController.swift */; };
+		01591FED2191D78400DA8DD3 /* SpeakerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01591FEC2191D78400DA8DD3 /* SpeakerTableViewCell.swift */; };
+		01591FEF2191D99700DA8DD3 /* SpeakerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01591FEE2191D99700DA8DD3 /* SpeakerEntity.swift */; };
+		01E36725218707B800F4E318 /* SessionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E36724218707B800F4E318 /* SessionTableViewCell.swift */; };
+		01E367272187129700F4E318 /* SessionEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E367262187129700F4E318 /* SessionEntity.swift */; };
 		2EA7FFC2E0A30F5561B102F6 /* Pods_projet_devfest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3DC1CBD686B6DBFCC6C8B45 /* Pods_projet_devfest.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +32,11 @@
 		011842AB2185F24B0004A37B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		011842B12185F84F0004A37B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		011842B32185F9DE0004A37B /* SessionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsViewController.swift; sourceTree = "<group>"; };
+		01591FEA2191D76C00DA8DD3 /* SpeakersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakersViewController.swift; sourceTree = "<group>"; };
+		01591FEC2191D78400DA8DD3 /* SpeakerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakerTableViewCell.swift; sourceTree = "<group>"; };
+		01591FEE2191D99700DA8DD3 /* SpeakerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakerEntity.swift; sourceTree = "<group>"; };
+		01E36724218707B800F4E318 /* SessionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionTableViewCell.swift; sourceTree = "<group>"; };
+		01E367262187129700F4E318 /* SessionEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionEntity.swift; sourceTree = "<group>"; };
 		2CE12F13AA2FABA5CB9A9A05 /* Pods-projet_devfest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-projet_devfest.release.xcconfig"; path = "Pods/Target Support Files/Pods-projet_devfest/Pods-projet_devfest.release.xcconfig"; sourceTree = "<group>"; };
 		D1D84F63317ED12690066D6E /* Pods-projet_devfest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-projet_devfest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-projet_devfest/Pods-projet_devfest.debug.xcconfig"; sourceTree = "<group>"; };
 		E3DC1CBD686B6DBFCC6C8B45 /* Pods_projet_devfest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_projet_devfest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,16 +75,37 @@
 		0118429E2185F24A0004A37B /* projet_devfest */ = {
 			isa = PBXGroup;
 			children = (
+				01591FF12191DEDF00DA8DD3 /* Controllers */,
+				01591FF02191DED000DA8DD3 /* Entities */,
 				0118429F2185F24A0004A37B /* AppDelegate.swift */,
-				011842A12185F24A0004A37B /* ViewController.swift */,
-				011842B12185F84F0004A37B /* HomeViewController.swift */,
 				011842A32185F24A0004A37B /* Main.storyboard */,
-				011842B32185F9DE0004A37B /* SessionsViewController.swift */,
 				011842A62185F24B0004A37B /* Assets.xcassets */,
 				011842A82185F24B0004A37B /* LaunchScreen.storyboard */,
 				011842AB2185F24B0004A37B /* Info.plist */,
 			);
 			path = projet_devfest;
+			sourceTree = "<group>";
+		};
+		01591FF02191DED000DA8DD3 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				01591FEE2191D99700DA8DD3 /* SpeakerEntity.swift */,
+				01E367262187129700F4E318 /* SessionEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		01591FF12191DEDF00DA8DD3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				011842B12185F84F0004A37B /* HomeViewController.swift */,
+				011842B32185F9DE0004A37B /* SessionsViewController.swift */,
+				01591FEA2191D76C00DA8DD3 /* SpeakersViewController.swift */,
+				01591FEC2191D78400DA8DD3 /* SpeakerTableViewCell.swift */,
+				01E36724218707B800F4E318 /* SessionTableViewCell.swift */,
+				011842A12185F24A0004A37B /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		37D94C5E275802BA43644427 /* Frameworks */ = {
@@ -207,8 +238,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				011842A22185F24A0004A37B /* ViewController.swift in Sources */,
+				01E367272187129700F4E318 /* SessionEntity.swift in Sources */,
 				011842B42185F9DE0004A37B /* SessionsViewController.swift in Sources */,
+				01591FED2191D78400DA8DD3 /* SpeakerTableViewCell.swift in Sources */,
+				01E36725218707B800F4E318 /* SessionTableViewCell.swift in Sources */,
 				011842A02185F24A0004A37B /* AppDelegate.swift in Sources */,
+				01591FEF2191D99700DA8DD3 /* SpeakerEntity.swift in Sources */,
+				01591FEB2191D76C00DA8DD3 /* SpeakersViewController.swift in Sources */,
 				011842B22185F84F0004A37B /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,7 +394,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = projet_devfest/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.quentin.projet-devfest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -373,7 +412,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = projet_devfest/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.quentin.projet-devfest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
