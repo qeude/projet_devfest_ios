@@ -43,13 +43,8 @@ class SpeakersViewController: UIViewController, UITableViewDataSource, UITableVi
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let alertController = UIAlertController(title: "Selected", message: "\(self.speakers[indexPath.row].name).", preferredStyle: .alert)
+        tableView.deselectRow(at: indexPath, animated: false)
         
-        let alertAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
-        
-        alertController.addAction(alertAction)
-        
-        present(alertController, animated: true, completion: nil)
     }
     
     
@@ -70,4 +65,12 @@ class SpeakersViewController: UIViewController, UITableViewDataSource, UITableVi
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "speakerDetails",
+            let nextVC = segue.destination as? SpeakerDetailsViewController,
+            let indexPath = self.tableView.indexPathForSelectedRow {
+            let selectedSpeaker = speakers[indexPath.row]
+            nextVC.selectedSpeaker = selectedSpeaker
+        }
+    }
 }

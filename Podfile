@@ -11,4 +11,5 @@ target 'projet_devfest' do
 
   # Pods for projet_devfest
   pod 'Alamofire', '~> 4.7'
+  pod 'AlamofireImage', '~> 3.4'
 end

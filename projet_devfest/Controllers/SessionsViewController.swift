@@ -45,13 +45,7 @@ class SessionsViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let alertController = UIAlertController(title: "Selected", message: "\(self.sessions[indexPath.row].title).", preferredStyle: .alert)
-        
-        let alertAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
-        
-        alertController.addAction(alertAction)
-        
-        present(alertController, animated: true, completion: nil)
+        tableView.deselectRow(at: indexPath, animated: false)        
     }
     
     func getSessions(completion: @escaping ([SessionEntity]) -> Void) {
@@ -69,4 +63,12 @@ class SessionsViewController: UIViewController, UITableViewDataSource, UITableVi
                 completion(data)
     }
 }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "sessionDetails",
+            let nextVC = segue.destination as? SessionDetailsViewController,
+            let indexPath = self.tableView.indexPathForSelectedRow {
+                let selectedSession = sessions[indexPath.row]
+                nextVC.selectedSession = selectedSession
+            }
+    }
 }
