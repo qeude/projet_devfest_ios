@@ -19,5 +19,7 @@ class SessionDetailsViewController: UIViewController {
         self.labelTitle.text = selectedSession?.title
         self.labelDescription.text = (selectedSession?.description != "") ? selectedSession?.description : "Aucune description n'est disponible pour cette session."
     }
-
+    
+    
+    
 }

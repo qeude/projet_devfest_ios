@@ -11,8 +11,7 @@ import Alamofire
 
 class SessionsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    @IBOutlet weak var tableView : UITableView!;
-    
+    @IBOutlet weak var tableView : UITableView!
     private var sessions: [SessionEntity] = []
     
     override func viewDidLoad() {
@@ -23,7 +22,6 @@ class SessionsViewController: UIViewController, UITableViewDataSource, UITableVi
         }
         tableView.dataSource = self
         tableView.delegate = self
-  
     }
     
     
