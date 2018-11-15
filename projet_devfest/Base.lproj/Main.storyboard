@@ -157,6 +157,7 @@
                                         <state key="normal" title="Selectionner dans la gallerie"/>
                                         <connections>
                                             <action selector="openCameraButtonWithSender:" destination="zxf-In-bay" eventType="touchUpInside" id="qvz-3V-m8k"/>
+                                            <action selector="openLibraryButtonWithSender:" destination="zxf-In-bay" eventType="touchUpInside" id="kJF-oV-cvT"/>
                                         </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dwD-w2-VKP">
