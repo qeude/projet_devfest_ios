@@ -47,7 +47,7 @@ class SessionsViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func getSessions(completion: @escaping ([SessionEntity]) -> Void) {
-        Alamofire.request("http://localhost:3000/sessions")
+        Alamofire.request("\(EnvironmentVar.baseUrl)sessions")
             .responseJSON{ response in
                 guard let json = response.value as? [[String: Any]]
                 else{

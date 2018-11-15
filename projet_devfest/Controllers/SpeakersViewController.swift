@@ -50,7 +50,7 @@ class SpeakersViewController: UIViewController, UITableViewDataSource, UITableVi
     
     
     func getSpeakers(completion: @escaping ([SpeakerEntity]) -> Void) {
-        Alamofire.request("http://localhost:3000/speakers")
+        Alamofire.request("\(EnvironmentVar.baseUrl)speakers")
             .responseJSON{ response in
                 guard let json = response.value as? [[String: Any]]
                     else{

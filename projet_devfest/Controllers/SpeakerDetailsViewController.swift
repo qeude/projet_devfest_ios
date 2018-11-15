@@ -32,7 +32,7 @@ class SpeakerDetailsViewController: UIViewController {
     }
     
     func getImageSpeaker(){
-        let urlImage = "https://devfest.gdgnantes.com/\(self.selectedSpeaker!.imagePath )"
+        let urlImage = "\(EnvironmentVar.imageUrl)\(self.selectedSpeaker!.imagePath)"
         Alamofire.request(urlImage).responseImage { response in 
             if let imageResponse = response.result.value {
                self.image.image = imageResponse
