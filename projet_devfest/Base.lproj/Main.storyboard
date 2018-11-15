@@ -91,7 +91,7 @@
                                         <rect key="frame" x="151.5" y="275.5" width="72" height="30"/>
                                         <state key="normal" title="Mes notes"/>
                                         <connections>
-                                            <segue destination="zxf-In-bay" kind="show" id="awC-35-oHr"/>
+                                            <segue destination="zxf-In-bay" kind="show" identifier="notes" id="awC-35-oHr"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcm-Nb-09m">
@@ -145,15 +145,21 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5bo-hr-XFA">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5s-oh-ZqH">
+                                        <rect key="frame" x="8" y="16" width="359" height="27.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xT-SE-gGl">
-                                        <rect key="frame" x="8" y="16" width="359" height="30"/>
+                                        <rect key="frame" x="8" y="59.5" width="359" height="30"/>
                                         <state key="normal" title="Prendre une photo"/>
                                         <connections>
                                             <action selector="openCameraButtonWithSender:" destination="zxf-In-bay" eventType="touchUpInside" id="wHv-ra-q5T"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tYF-Rx-rGD">
-                                        <rect key="frame" x="8" y="62" width="359" height="30"/>
+                                        <rect key="frame" x="8" y="105.5" width="359" height="30"/>
                                         <state key="normal" title="Selectionner dans la gallerie"/>
                                         <connections>
                                             <action selector="openCameraButtonWithSender:" destination="zxf-In-bay" eventType="touchUpInside" id="qvz-3V-m8k"/>
@@ -161,7 +167,7 @@
                                         </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dwD-w2-VKP">
-                                        <rect key="frame" x="8" y="206" width="359" height="387"/>
+                                        <rect key="frame" x="8" y="249.5" width="359" height="387"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="387" id="LOb-a9-EQG"/>
@@ -171,7 +177,7 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JeC-s8-0ob">
-                                        <rect key="frame" x="8" y="92" width="359" height="128"/>
+                                        <rect key="frame" x="8" y="100" width="359" height="128"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="128" id="fU7-pA-GTx"/>
                                         </constraints>
@@ -182,17 +188,20 @@
                                     <constraint firstAttribute="trailing" secondItem="JeC-s8-0ob" secondAttribute="trailing" constant="8" id="9Xh-Gj-4rZ"/>
                                     <constraint firstItem="JeC-s8-0ob" firstAttribute="top" secondItem="tYF-Rx-rGD" secondAttribute="bottom" constant="-30" id="CZ5-ZA-ysj"/>
                                     <constraint firstItem="tYF-Rx-rGD" firstAttribute="top" secondItem="4xT-SE-gGl" secondAttribute="bottom" constant="16" id="I9P-sv-gK7"/>
-                                    <constraint firstItem="4xT-SE-gGl" firstAttribute="top" secondItem="5bo-hr-XFA" secondAttribute="top" constant="16" id="M8e-Fw-wLp"/>
+                                    <constraint firstItem="4xT-SE-gGl" firstAttribute="top" secondItem="G5s-oh-ZqH" secondAttribute="bottom" constant="16" id="Nlj-ul-JGo"/>
                                     <constraint firstItem="dwD-w2-VKP" firstAttribute="leading" secondItem="5bo-hr-XFA" secondAttribute="leading" constant="8" id="QtP-lD-fQ2"/>
+                                    <constraint firstItem="G5s-oh-ZqH" firstAttribute="leading" secondItem="5bo-hr-XFA" secondAttribute="leading" constant="8" id="b2Q-hc-JNe"/>
                                     <constraint firstAttribute="trailing" secondItem="tYF-Rx-rGD" secondAttribute="trailing" constant="8" id="dGC-jc-n2s"/>
                                     <constraint firstItem="tYF-Rx-rGD" firstAttribute="leading" secondItem="5bo-hr-XFA" secondAttribute="leading" constant="8" id="eJo-q7-WPw"/>
                                     <constraint firstItem="JeC-s8-0ob" firstAttribute="centerX" secondItem="5bo-hr-XFA" secondAttribute="centerX" id="jta-Qx-1rE"/>
                                     <constraint firstItem="dwD-w2-VKP" firstAttribute="top" secondItem="JeC-s8-0ob" secondAttribute="bottom" constant="16" id="mgy-YA-tJI"/>
+                                    <constraint firstItem="G5s-oh-ZqH" firstAttribute="top" secondItem="5bo-hr-XFA" secondAttribute="top" constant="16" id="mkp-WW-AP7"/>
                                     <constraint firstItem="4xT-SE-gGl" firstAttribute="leading" secondItem="5bo-hr-XFA" secondAttribute="leading" constant="8" id="p2d-m0-zfj"/>
                                     <constraint firstItem="4xT-SE-gGl" firstAttribute="centerX" secondItem="5bo-hr-XFA" secondAttribute="centerX" id="qPK-NP-Kq4"/>
                                     <constraint firstAttribute="bottom" secondItem="dwD-w2-VKP" secondAttribute="bottom" constant="-102" id="tax-QZ-1Bi"/>
                                     <constraint firstItem="dwD-w2-VKP" firstAttribute="centerX" secondItem="5bo-hr-XFA" secondAttribute="centerX" id="v39-AN-yk6"/>
                                     <constraint firstAttribute="trailing" secondItem="dwD-w2-VKP" secondAttribute="trailing" constant="8" id="vFH-ac-5Nl"/>
+                                    <constraint firstAttribute="trailing" secondItem="G5s-oh-ZqH" secondAttribute="trailing" constant="8" id="xMz-zL-e2h"/>
                                     <constraint firstItem="JeC-s8-0ob" firstAttribute="leading" secondItem="5bo-hr-XFA" secondAttribute="leading" constant="8" id="xoy-Vo-D3y"/>
                                 </constraints>
                             </scrollView>
@@ -208,6 +217,7 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="JeC-s8-0ob" id="YAH-Zd-gxn"/>
+                        <outlet property="labelTitle" destination="G5s-oh-ZqH" id="6Hg-5k-H7C"/>
                         <outlet property="textNotes" destination="dwD-w2-VKP" id="4C3-pQ-ME7"/>
                     </connections>
                 </viewController>

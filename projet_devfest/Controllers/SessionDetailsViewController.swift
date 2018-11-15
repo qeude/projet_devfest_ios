@@ -20,6 +20,13 @@ class SessionDetailsViewController: UIViewController {
         self.labelDescription.text = (selectedSession?.description != "") ? selectedSession?.description : "Aucune description n'est disponible pour cette session."
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "notes",
+            let nextVC = segue.destination as? NotesViewController{
+            nextVC.selectedSession = self.selectedSession
+        }
+    }
+    
     
     
 }
